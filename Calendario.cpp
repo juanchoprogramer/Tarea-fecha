@@ -20,22 +20,38 @@ void Calendario::mostrarCalendario()
 		cin >> opcion;
 		switch (opcion) {
 		case 1:
-			cout << "1.-Formato DD/MM/YYYY 2.-Formato MM/DD/YYYY" << endl;
+			cout << "1.-Formato DD/MM/YYYY 2.-Formato MM/DD/YYYY 3.-Formato YYYY/MM/DD 4.-Formato YYYY/DD/MM 5.-Formato DD/YYYY/MM 6.-Formato MM/YYYY/DD" << endl;
 			cin >> vuelta;
 			if (vuelta == 1)
-				fechaDate.agregarFechaDia();
+				fechaDate.agregarFechaDiaMesAnio();
 			else if (vuelta == 2)
-				fechaDate.agregarFechaMes();
+				fechaDate.agregarFechaMesDiaAnio();
+			else if (vuelta == 3)
+				fechaDate.agregarFechasAnioMesDia();
+			else if (vuelta == 4)
+				fechaDate.agregarFechasAnioDiaMes();
+			else if (vuelta == 5)
+				fechaDate.agregarFechasDiaAnioMes();
+			else if (vuelta == 6)
+				fechaDate.agregarFechasMesAnioDia();
 			else
 				cout << "Formato no valido";
 			break;
 		case 2:
-			cout << "1.-Formato DD/MM/YYYY 2.-Formato MM/DD/YYYY" << endl;
+			cout << "1.-Formato DD/MM/YYYY 2.-Formato MM/DD/YYYY 3.-Formato YYYY/MM/DD 4.-Formato YYYY/DD/MM 5.-Formato DD/YYYY/MM 6.-Formato MM/YYYY/DD" << endl;
 			cin>>vuelta;
 			if (vuelta == 1)
-				fechaDate.mostrarFechaDia();
+				fechaDate.mostrarFechaDiaMesAnio();
 			else if (vuelta == 2)
-				fechaDate.mostrarFechaMes();
+				fechaDate.mostrarFechaMesDiaAnio();
+			else if (vuelta == 3)
+				fechaDate.mostrarFechasAnioMesDia();
+			else if (vuelta == 4)
+				fechaDate.mostrarFechasAnioDiaMes();
+			else if (vuelta == 5)
+				fechaDate.mostrarFechasDiaAnioMes();
+			else if (vuelta == 6)
+				fechaDate.mostrarFechasMesAnioDia();
 			else
 				cout << "Formato no valido";
 			break;

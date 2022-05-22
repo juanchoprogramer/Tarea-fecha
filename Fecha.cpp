@@ -10,20 +10,43 @@ void Fecha::setFecha(int inMonth, int inDay, int inYear)
 	day = inDay;
 	year = inYear;
 }
-void Fecha::mostrarFechaMes()
+void Fecha::mostrarFechaMesDiaAnio()
 {
 	cout << "mes:" << month << endl;
 	cout << "dia:" << day << endl;
 	cout << "anio:" << year << endl;
 }
-void Fecha::mostrarFechaDia()
+void Fecha::mostrarFechaDiaMesAnio()
 {
 	cout << "dia:" << day << endl;
 	cout << "mes:" << month << endl;
 	cout << "anio:" << year << endl;
 }
-
-void Fecha::agregarFechaMes()
+void Fecha::mostrarFechasAnioDiaMes()
+{
+	cout << "anio:" << year << endl;
+	cout << "dia:" << day << endl;
+	cout << "mes:" << month << endl;
+}
+void Fecha::mostrarFechasAnioMesDia()
+{
+	cout << "anio:" << year << endl;
+	cout << "mes:" << month << endl; 
+	cout << "dia:" << day << endl;
+}
+void Fecha::mostrarFechasDiaAnioMes()
+{
+	cout << "dia:" << day << endl;
+	cout << "anio:" << year << endl;
+	cout << "mes:" << month << endl;
+}
+void Fecha::mostrarFechasMesAnioDia()
+{
+	cout << "mes:" << month << endl;
+	cout << "anio:" << year << endl;
+	cout << "dia:" << day << endl;
+}
+void Fecha::agregarFechaMesDiaAnio()
 {
 	int inMonth, inDay, inYear;
 	cout << "Ingresa mes:" << endl;
@@ -35,13 +58,12 @@ void Fecha::agregarFechaMes()
 	try {
 		validarFecha(inMonth, inDay, inYear);
 	}
-	catch(invalid_argument& error){
+	catch (invalid_argument& error) {
 		cerr << error.what() << endl;
 	}
 }
-
-void Fecha::agregarFechaDia()
-{	
+void Fecha::agregarFechaDiaMesAnio()
+{
 	int inMonth, inDay, inYear;
 	cout << "Ingresa dia:" << endl;
 	cin >> inDay;
@@ -56,7 +78,70 @@ void Fecha::agregarFechaDia()
 		cerr << error.what() << endl;
 	}
 }
-
+void Fecha::agregarFechasAnioDiaMes()
+{
+	int inMonth, inDay, inYear;
+	cout << "Ingresa anio:" << endl;
+	cin >> inYear;
+	cout << "Ingresa dia:" << endl;
+	cin >> inDay;
+	cout << "Ingresa mes:" << endl;
+	cin >> inMonth;
+	try {
+		validarFecha(inMonth, inDay, inYear);
+	}
+	catch (invalid_argument& error) {
+		cerr << error.what() << endl;
+	}
+}
+void Fecha::agregarFechasAnioMesDia()
+{
+	int inMonth, inDay, inYear;
+	cout << "Ingresa anio:" << endl;
+	cin >> inYear;
+	cout << "Ingresa mes:" << endl;
+	cin >> inMonth;
+	cout << "Ingresa dia:" << endl;
+	cin >> inDay;
+	try {
+		validarFecha(inMonth, inDay, inYear);
+	}
+	catch (invalid_argument& error) {
+		cerr << error.what() << endl;
+	}
+}
+void Fecha::agregarFechasDiaAnioMes()
+{
+	int inMonth, inDay, inYear;
+	cout << "Ingresa dia:" << endl;
+	cin >> inDay;
+	cout << "Ingresa anio:" << endl;
+	cin >> inYear;
+	cout << "Ingresa mes:" << endl;
+	cin >> inMonth;
+	try {
+		validarFecha(inMonth, inDay, inYear);
+	}
+	catch (invalid_argument& error) {
+		cerr << error.what() << endl;
+	}
+}
+void Fecha::agregarFechasMesAnioDia()
+{
+	int inMonth, inDay, inYear;
+	cout << "Ingresa mes:" << endl;
+	cin >> inMonth;
+	cout << "Ingresa anio:" << endl;
+	cin >> inYear;
+	cout << "Ingresa dia:" << endl;
+	cin >> inDay;
+	try {
+		validarFecha(inMonth, inDay, inYear);
+	}
+	catch (invalid_argument& error) {
+		cerr << error.what() << endl;
+	}
+}
 void Fecha::validarFecha(int inMonth, int inDay, int inYear)
 {
 	if (inMonth >= 1 && inMonth <= 12 && inDay >= 1 && inDay <= 31 && inYear >= 1 && inYear <= 2100) {

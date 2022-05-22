@@ -78,10 +78,18 @@ public:
 		return *this;
 	}
 	void setFecha(int inMonth, int inDay, int inYear);
-	void mostrarFechaMes();
-	void mostrarFechaDia();
-	void agregarFechaMes();
-	void agregarFechaDia();
+	void mostrarFechaMesDiaAnio();
+	void mostrarFechaDiaMesAnio();
+	void mostrarFechasAnioDiaMes();
+	void mostrarFechasAnioMesDia();
+	void mostrarFechasDiaAnioMes();
+	void mostrarFechasMesAnioDia();
+	void agregarFechaMesDiaAnio();
+	void agregarFechaDiaMesAnio();
+	void agregarFechasAnioDiaMes();
+	void agregarFechasAnioMesDia();
+	void agregarFechasDiaAnioMes();
+	void agregarFechasMesAnioDia();
 	void validarFecha(int inMonth, int inDay, int inYear);
 	void fechaSystema();
 };
